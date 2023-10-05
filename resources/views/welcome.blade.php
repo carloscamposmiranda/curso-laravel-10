@@ -14,7 +14,7 @@
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png.png') }}" sizes="180x180">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}" sizes="180x180">
     <link rel="icon" href="{{ asset('img/favicons/favicon-96x96.png') }}" sizes="96x96" type="image/png">
     <link rel="icon" href="{{ asset('img/favicons/favicon-72x72.png') }}" sizes="72x72" type="image/png">
     <link rel="icon" href="{{ asset('img/favicons/favicon.ico') }}">
