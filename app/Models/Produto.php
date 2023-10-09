@@ -13,4 +13,18 @@ class Produto extends Model
         'nmproduto',
         'valorp',
     ];
+
+    public function getProdutosPesquisarIndex(string $search = '')
+    {
+        $produto = $this->where(function ($query) use ($search)
+        {
+            if($search)
+            {
+                $query->where('nmproduto', $search);
+                $query->orWhere('nmproduto', 'LIKE', "%{$search}%" );
+            }
+        })->get();
+        
+        return $produto;
+    }
 }
