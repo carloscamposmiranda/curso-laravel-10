@@ -37,7 +37,7 @@
                     <td>{{$produto->nmproduto}}</td>
                     <td>{{'R$ ' . number_format($produto->valorp, 2, ',', '.')}}</td>
                     <td>
-                        <a href="" type="button" class="btn btn-light btn-sm">Editar</a>
+                        <a href="{{ route('atualizar.produto', $produto->id) }}" type="button" class="btn btn-light btn-sm">Editar</a>
                         <meta name="csrf-token" content="{{ csrf_token() }}">
                         <a onclick="SwalDelete('{{route('produto.delete')}}', {{$produto->id}})" id="delete" data-id="{{$produto->id}}" type="button" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
