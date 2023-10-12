@@ -10,11 +10,17 @@
 
         <div class="mb-3">
             <label for="nmproduto" class="form-label">Nome</label>
-            <input type="text" class="form-control" name="nmproduto" id="nmproduto">
+            <input type="text" class="form-control @error('nmproduto') is-invalid  @enderror" value="{{ old('nmproduto') }}" name="nmproduto" id="nmproduto">
+            @error('nmproduto')
+                <div class="invalid-feedback">O Nome do Produto é obrigatório</div>
+            @enderror
         </div>
         <div class="mb-3">
-            <label for="valorp" class="form-label">Preço</label>
-            <input type="text" class="form-control" name="valorp" id="valorp">
+            <label for="valorp" class="form-label">Valor</label>
+            <input type="text" class="form-control @error('valorp') is-invalid  @enderror money" value="{{ old('valorp') }}" name="valorp" id="valorp">
+            @error('valorp')
+                <div class="invalid-feedback">O Valor do Produto é obrigatório</div>
+            @enderror
         </div>
         <button type="submit" class="btn btn-success">CADATRAR</button>
 

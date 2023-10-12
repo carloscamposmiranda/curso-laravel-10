@@ -111,6 +111,8 @@
     <script src="{{ asset('js/color-modes.js') }}"></script>
     <script src="{{ asset('swal2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/projeto.js') }}"></script>
+    <script src="{{ asset('js/jquery.mask.js') }}"></script>
+    <script src="{{ asset('js/mask.js') }}"></script>
     
     
 
