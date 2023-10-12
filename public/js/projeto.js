@@ -1,5 +1,3 @@
-
-
 function SwalDelete(rotaUrl, fcodProd) {
     console.log(rotaUrl);
     swal({

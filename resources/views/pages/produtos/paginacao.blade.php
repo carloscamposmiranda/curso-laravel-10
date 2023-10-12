@@ -13,7 +13,7 @@
             <div class="col-md-3 pull-left">
                 <button type="submit" class="btn btn-primary">Pesquisar</button>
             
-                <button type="button" class="btn btn-success float-end">Adicionar</button>
+                <a href="{{ route('cadastrar.produto') }}" class="btn btn-success float-end">Adicionar</a>
             </div>
         </div>
     </form>

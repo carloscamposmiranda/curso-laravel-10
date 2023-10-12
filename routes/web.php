@@ -22,4 +22,6 @@ Route::get('/', function () {
 Route::prefix('produtos')->group(function(){
     Route::get('/', [ProdutosController::class,  'index'])->name('produto.index');
     Route::delete('/delete', [ProdutosController::class,  'delete'])->name('produto.delete');
+    Route::get('/cadastrar-produto', [ProdutosController::class,  'cadastrarProduto'])->name('cadastrar.produto');
+    Route::post('/cadastrar-produto', [ProdutosController::class,  'cadastrarProduto'])->name('cadastrar.produto');
 });
