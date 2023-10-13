@@ -114,6 +114,7 @@
     <script src="{{ asset('js/projeto.js') }}"></script>
     <script src="{{ asset('js/jquery.mask.js') }}"></script>
     <script src="{{ asset('js/mask.js') }}"></script>
+    <script src="{{ asset('js/consultacep.js') }}"></script>
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     {!! Toastr::message() !!}
     

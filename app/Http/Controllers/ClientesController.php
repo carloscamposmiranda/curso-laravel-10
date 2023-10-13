@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FormRequestClientes;
 use App\Models\Cliente;
 use App\Models\Components;
 use Brian2694\Toastr\Facades\Toastr;
@@ -25,7 +26,7 @@ class ClientesController extends Controller
         return view('pages.clientes.listaClientes', compact('findCliente'));
     }
 
-    public function delete(Request $request)
+    public function delete (Request $request)
     {
         $id = $request->id;
         $buscaCliente = Cliente::find($id);
@@ -34,7 +35,7 @@ class ClientesController extends Controller
         return response()->json(['situacao' => '1', 'status' => 'success', 'title' => 'Sucesso!', 'message' => 'O Cliente deletado com exito.']);
     }
 
-    public function cadastrarCliente(Request $request)
+    public function cadastrarCliente(FormRequestClientes $request)
     {
         if($request->method() == "POST")
         {
@@ -49,8 +50,9 @@ class ClientesController extends Controller
         return view('pages.clientes.create');
     }
 
-    public function atualizaCliente(Request $request, $id)
+    public function atualizarCliente(FormRequestClientes $request, $id)
     {
+        //dd($request);
         if($request->method() == "PUT")
         {
             $data = $request->all();

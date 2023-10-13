@@ -1,5 +1,5 @@
-function SwalDelete(rotaUrl, fcodProd) {
-    console.log(rotaUrl);
+function SwalDelete(rotaUrl, fcod) {
+    //console.log(rotaUrl);
     swal({
         title: 'Atenção!',
         text: "Tem certeza de que deseja excluir este registro? Esta ação é irreversível e você não poderá recuperar os registros excluídos.",
@@ -18,7 +18,7 @@ function SwalDelete(rotaUrl, fcodProd) {
                         method:'DELETE',
                         data: {
                             _token: CSRF_TOKEN,
-                            id: fcodProd,
+                            id: fcod,
                         },
                         dataType: 'json'
                     })

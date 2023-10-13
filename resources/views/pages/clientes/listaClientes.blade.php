@@ -28,6 +28,7 @@
                     <th scope="col">DESCRIÇÃO</th>
                     <th scope="col">E-MAIL</th>
                     <th scope="col">ENDEREÇO</th>
+                    <th scope="col">CEP</th>
                     <th scope="col">AÇÃO</th>
                 </tr>
             </thead>
@@ -38,10 +39,11 @@
                     <td>{{$cliente->nmcliente}}</td>
                     <td>{{$cliente->email}}</td>
                     <td>{{$cliente->endereco}}</td>
+                    <td>{{$cliente->cep}}</td>
                     <td>
                         <a href="{{ route('atualizar.cliente', $cliente->id) }}" type="button" class="btn btn-light btn-sm">Editar</a>
                         <meta name="csrf-token" content="{{ csrf_token() }}">
-                        <a onclick="SwalDelete('{{route('cliente.delete')}}', {{$cliente->id}})" id="delete" data-id="{{$cliente->id}}" type="button" class="btn btn-danger btn-sm">Excluir</a>
+                        <a onclick="SwalDelete('{{ route('cliente.delete') }}',{{ $cliente->id }})" id="delete" data-id="{{$cliente->id}}" type="button" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
                 @endforeach
