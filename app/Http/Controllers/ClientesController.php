@@ -40,7 +40,7 @@ class ClientesController extends Controller
         if($request->method() == "POST")
         {
             $data = $request->all();
-            $componetes = new Components();
+            $components = new Components();
             Cliente::create($data);
 
             Toastr::success('Cliente cadastrado com sucesso!');
@@ -56,7 +56,7 @@ class ClientesController extends Controller
         if($request->method() == "PUT")
         {
             $data = $request->all();
-            $componetes = new Components();
+            $components = new Components();
             $updateCliente = Cliente::find($id);
             $updateCliente->update($data);
 

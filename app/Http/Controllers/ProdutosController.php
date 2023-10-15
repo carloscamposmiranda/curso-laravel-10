@@ -44,7 +44,8 @@ class ProdutosController extends Controller
 
     public function cadastrarProduto(FormRequestProduto $request)
     {
-        if($request->method() == "POST"){
+        if($request->method() == "POST")
+        {
             $data = $request->all();
             $componentes = new Components();
             $data['valorp'] = $componentes->LimpaMascara($data['valorp']);
