@@ -86,11 +86,10 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search"
-            aria-label="Search">
+        <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" value="{{ auth()->user()->name }}">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Desconectar</a>
+                <a class="nav-link px-3" href="{{ route('login.destroy') }}">Desconectar</a>
             </div>
         </div>
     </header>
